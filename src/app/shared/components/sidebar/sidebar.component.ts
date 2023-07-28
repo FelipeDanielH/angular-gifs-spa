@@ -12,7 +12,11 @@ export class SidebarComponent {
 
 
   get tags():string[] {
-    return this.gifsService.tagsHistory
+    return JSON.parse(localStorage.getItem('history')!)
+  }
+
+  searchByHistory(tag: string): void{
+    this.gifsService.searchTag(tag)
   }
 
 }

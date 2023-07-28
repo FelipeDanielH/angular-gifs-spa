@@ -5,6 +5,7 @@
 
   <div class="list-group list-reset">
     <button *ngFor="let tag of tags"
+            (click)="searchByHistory(tag)"
             class="list-group-item list-group-item-action">
       {{ tag | titlecase }}
     </button>
