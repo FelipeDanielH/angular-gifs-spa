@@ -1,15 +1,5 @@
 <div class="row row-cols-1 row-cols-md-4 g-4">
-
-  <div *ngFor="let gif of gifs"
-       class="col">
-    <div class="card mb-2 text-center">
-      <img [src]="gif.images.downsized_medium.url"
-           [alt]="gif.title"
-           class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">{{gif.title}}</h5>
-      </div>
-    </div>
-  </div>
-
+  <gifs-card-gif *ngFor="let gif of gifs"
+                 [gif]="gif">
+  </gifs-card-gif>
 </div>
